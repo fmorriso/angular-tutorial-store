@@ -1,6 +1,7 @@
 /* Global Styles */
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
 
 * {
   font-family: 'Roboto', Arial, sans-serif;
@@ -10,9 +11,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-body {
+/* body {
   margin: 0;
-}
+} */
 
 .container {
   display: flex;
@@ -138,3 +139,6 @@ app-top-bar h1 {
   border-radius: 2px;
   background-color: #EEEEEE;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
