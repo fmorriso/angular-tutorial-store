@@ -56,6 +56,18 @@
                   "maximumError": "5mb"
                 }
               ]
+            },
+            "development": {
+              "optimization": false,
+              "outputHashing": "none",
+              "sourceMap": true,
+              "extractCss": true,
+              "commonChunk": true,
+              "namedChunks": true,
+              "aot": false,
+              "extractLicenses": true,
+              "vendorChunk": true,
+              "buildOptimizer": false
             }
           }
         },
@@ -67,6 +79,9 @@
           "configurations": {
             "production": {
               "browserTarget": "angular-tutorial-store:build:production"
+            },
+            "development":{
+              "browserTarget": "angular-tutorial-store:build:development"
             }
           }
         },
