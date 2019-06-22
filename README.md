@@ -12,7 +12,7 @@ It was generated with [Angular CLI](https://github.com/angular/angular-cli) vers
 * [Angular Flex Layout + Material StackBlitz](https://stackblitz.com/edit/angular-material-flex-layout-seed?file=app%2Fapp.module.ts)
 * [Angular Material button examples](https://www.angularjswiki.com/angular/buttons-in-angular-using-material-design-mat-button-example/)
 ## Differences between this project and the official Angular Online Store Tutorial
-* Routing is used with two Routes:
+* Routing is defined with two Routes:
   1. Home - where the main tutorial code is located
   1. About - displays the version information of key software components
 * The `HomeComponent` is where the tutorial code is located, not the `AppComponent`.
