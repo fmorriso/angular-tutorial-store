@@ -13,7 +13,8 @@ It was generated with [Angular CLI](https://github.com/angular/angular-cli) vers
 * [Angular Material button examples](https://www.angularjswiki.com/angular/buttons-in-angular-using-material-design-mat-button-example/)
 ## Differences between this project and the official Angular Online Store Tutorial
 * Routing is defined with two Routes:
-  1. Home - where the main tutorial code is located
+  1. Home - generic, do-nothing default landing page.
+  1. Products - where the main tutorial code is located
   1. About - displays the version information of key software components
 * The `HomeComponent` is where the tutorial code is located, not the `AppComponent`.
 * Angular Material and Angular Flex-Layout are used for styling instead of the styles specified in the official tutorial.
