@@ -11,13 +11,12 @@ import { Product } from './product';
 })
 export class ProductListComponent implements OnInit {
 	private products;
-	readonly snackbarConfig: MatSnackBarConfig = {duration: 2000, horizontalPosition: 'right', verticalPosition: 'top'};
 	constructor(private _snackbar: MatSnackBar) {}
 
 	ngOnInit() {
 		this.products = data;
 		console.log(JSON.stringify(this.products));
-		this._snackbar.open('product list loaded', 'ngOnInit', this.snackbarConfig);
+		this._snackbar.open('product list loaded', 'ngOnInit');
 	}
 
 	share() {

@@ -4,6 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //
 import { CustomMaterialModule } from './shared/custom-material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
 //
 import { AppRoutingModule } from './app-routing.module';
 //
@@ -17,21 +18,27 @@ import { ProductListComponent } from './products/product-list.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    AboutComponent,
-    HomeComponent,
-    NavigationComponent,
-    PageNotFoundComponent,
-    ProductListComponent
+	AppComponent,
+	AboutComponent,
+	HomeComponent,
+	NavigationComponent,
+	PageNotFoundComponent,
+	ProductListComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    CustomMaterialModule,
-    FlexLayoutModule
+	BrowserModule,
+	AppRoutingModule,
+	BrowserAnimationsModule,
+	CustomMaterialModule,
+	FlexLayoutModule
   ],
-  providers: [],
+  providers: [
+	{provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: {
+		duration: 2000,
+		horizontalPosition: 'center',
+		verticalPosition: 'bottom'}
+	}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
