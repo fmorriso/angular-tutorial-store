@@ -17,28 +17,32 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { ProductListComponent } from './products/product-list.component';
 
 @NgModule({
-  declarations: [
-	AppComponent,
-	AboutComponent,
-	HomeComponent,
-	NavigationComponent,
-	PageNotFoundComponent,
-	ProductListComponent
-  ],
-  imports: [
-	BrowserModule,
-	AppRoutingModule,
-	BrowserAnimationsModule,
-	CustomMaterialModule,
-	FlexLayoutModule
-  ],
-  providers: [
-	{provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: {
-		duration: 2000,
-		horizontalPosition: 'center',
-		verticalPosition: 'bottom'}
-	}
-  ],
-  bootstrap: [AppComponent]
+	declarations: [
+		AppComponent,
+		AboutComponent,
+		HomeComponent,
+		NavigationComponent,
+		PageNotFoundComponent,
+		ProductListComponent
+	],
+	imports: [
+		BrowserModule,
+		AppRoutingModule,
+		BrowserAnimationsModule,
+		CustomMaterialModule,
+		FlexLayoutModule
+	],
+	providers: [
+		{
+			provide: MAT_SNACK_BAR_DEFAULT_OPTIONS,
+			useValue: {
+				duration: 2000,
+				horizontalPosition: 'center',
+				verticalPosition: 'bottom',
+				panelClass: 'snackBarInfo'
+			}
+		}
+	],
+	bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

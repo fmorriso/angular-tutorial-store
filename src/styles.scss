@@ -1,7 +1,7 @@
 /* Global Styles */
 @import url('https://fonts.googleapis.com/css?family=Material+Icons');
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
-@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 /*
 
 * {
@@ -136,5 +136,32 @@ app-top-bar h1 {
   background-color: #EEEEEE;
 }
 */
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+	height: 100%;
+}
+body {
+	margin: 0;
+	font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+//DEVELOPER NOTE: see app.module.ts, providers section, to see where these styles are used
+$snackBarTextColor: white;
+$snackBarBackgroundNormal: #087a51;
+$snackBarActionColor: lightgray;
+.snackBarInfo {
+	background-color: $snackBarBackgroundNormal;
+	color: $snackBarTextColor;
+
+
+}
+.mat-simple-snackbar > span {
+	font-weight: bold;
+}
+.mat-simple-snackbar-action {
+	.mat-button {
+		.mat-button-wrapper {
+			color: $snackBarActionColor;
+		}
+	}
+}
