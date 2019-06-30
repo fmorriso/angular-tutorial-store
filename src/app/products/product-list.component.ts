@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material';
 //
 import { products as data } from './products';
 import { Product } from './product';
@@ -10,11 +11,12 @@ import { Product } from './product';
 })
 export class ProductListComponent implements OnInit {
 	private products;
-	constructor() {}
+	constructor(private _snackbar: MatSnackBar) {}
 
 	ngOnInit() {
 		this.products = data;
 		console.log(JSON.stringify(this.products));
+		this._snackbar.open('product list loaded', 'ngOnInit', {duration: 2000, horizontalPosition: 'right', verticalPosition: 'top'});
 	}
 
 	share() {
