@@ -146,14 +146,12 @@ body {
 }
 
 //DEVELOPER NOTE: see app.module.ts, providers section, to see where these styles are used
-$snackBarTextColor: white;
-$snackBarBackgroundNormal: #087a51;
-$snackBarActionColor: lightgray;
+$snackBarTextColorInfo: white;
+$snackBarBackgroundInfo: #087a51;
+$snackBarActionColorInfo: lightgray;
 .snackBarInfo {
-	background-color: $snackBarBackgroundNormal;
-	color: $snackBarTextColor;
-
-
+	background-color: $snackBarBackgroundInfo;
+	color: $snackBarTextColorInfo;
 }
 .mat-simple-snackbar > span {
 	font-weight: bold;
@@ -161,7 +159,7 @@ $snackBarActionColor: lightgray;
 .mat-simple-snackbar-action {
 	.mat-button {
 		.mat-button-wrapper {
-			color: $snackBarActionColor;
+			color: $snackBarActionColorInfo;
 		}
 	}
 }

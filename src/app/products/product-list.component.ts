@@ -23,6 +23,6 @@ export class ProductListComponent implements OnInit {
 	}
 
 	share() {
-		window.alert('The product has been shared!');
+		this._snackbar.open('The product has been shared!', 'share');
 	}
 }
