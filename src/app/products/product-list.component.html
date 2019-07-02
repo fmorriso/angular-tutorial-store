@@ -1,1 +1,11 @@
-<div class="mat-h2">Products</div>
+<div fxLayout="column" fxLayoutAlign="start left">
+
+	<div class="mat-h2">
+		Products
+	</div>
+
+	<ng-template ngFor let-product="$implicit" [ngForOf]="products">
+		<div class="mat-h3">{{ product.name }}</div>
+	</ng-template>
+	
+</div>

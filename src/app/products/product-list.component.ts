@@ -10,11 +10,11 @@ import { Product } from './product';
 	styleUrls: ['./product-list.component.scss']
 })
 export class ProductListComponent implements OnInit {
-	private products;
+	private _products;
 	constructor(private _snackbar: MatSnackBar) {}
 
 	ngOnInit() {
-		this.products = data;
+		this._products = data;
 		// console.log(JSON.stringify(this.products));
 		let defaults: MatSnackBarConfig = MAT_SNACK_BAR_DEFAULT_OPTIONS as MatSnackBarConfig;
 		//defaults.panelClass = 'snackBarInfo';
@@ -24,5 +24,9 @@ export class ProductListComponent implements OnInit {
 
 	share() {
 		this._snackbar.open('The product has been shared!', 'share');
+	}
+
+	get products(): Product[] {
+		return this._products;
 	}
 }
