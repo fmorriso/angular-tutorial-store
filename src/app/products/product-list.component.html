@@ -1,11 +1,16 @@
-<div fxLayout="column" fxLayoutAlign="start left">
-
+<div >
 	<div class="mat-h2">
 		Products
 	</div>
 
 	<ng-template ngFor let-product="$implicit" [ngForOf]="products">
-		<div class="mat-h3">{{ product.name }}</div>
+		<div class="mat-headline">
+			<a [title]="product.name + ' details'"> {{ product.name }} </a>
+		</div>
+		<div class="mat-subhead" *ngIf="product.description">
+			Description: {{ product.description }}
+		</div>
+
+		<button mat-raised-button color="accent" (click)="share()">Share</button>
 	</ng-template>
-	
 </div>
