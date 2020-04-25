@@ -36,7 +36,7 @@ import { ProductListComponent } from './products/product-list.component';
 		{
 			provide: MAT_SNACK_BAR_DEFAULT_OPTIONS,
 			useValue: {
-				duration: 2000,
+				duration: 3000,
 				horizontalPosition: 'center',
 				verticalPosition: 'bottom',
 				panelClass: 'snackBarInfo'

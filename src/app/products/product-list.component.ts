@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { MatSnackBar, MatSnackBarConfig, MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material';
+import { MatSnackBar, MatSnackBarConfig, MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
 //
-import { products as data } from './products';
+import { products as productData } from './products';
 import { Product } from './product';
 
 @Component({
@@ -10,23 +10,23 @@ import { Product } from './product';
 	styleUrls: ['./product-list.component.scss']
 })
 export class ProductListComponent implements OnInit {
-	private _products;
-	constructor(private _snackbar: MatSnackBar) {}
+	private productsList;
+	constructor(private snackbar: MatSnackBar) {}
 
 	ngOnInit() {
-		this._products = data;
+		this.productsList = productData;
 		// console.log(JSON.stringify(this.products));
-		let defaults: MatSnackBarConfig = MAT_SNACK_BAR_DEFAULT_OPTIONS as MatSnackBarConfig;
-		//defaults.panelClass = 'snackBarInfo';
-		this._snackbar.open('product list loaded', 'ngOnInit', defaults);
+		const defaults: MatSnackBarConfig = MAT_SNACK_BAR_DEFAULT_OPTIONS as MatSnackBarConfig;
+		// defaults.panelClass = 'snackBarInfo';
+		this.snackbar.open('product list loaded', 'ngOnInit', defaults);
 		console.log(defaults);
 	}
 
 	share() {
-		this._snackbar.open('The product has been shared!', 'share');
+		this.snackbar.open('The product has been shared!', 'share');
 	}
 
 	get products(): Product[] {
-		return this._products;
+		return this.productsList;
 	}
 }
