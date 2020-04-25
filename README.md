@@ -18,4 +18,4 @@ It was generated with [Angular CLI](https://github.com/angular/angular-cli) vers
   1. About - displays the version information of key software components
 * The `HomeComponent` is where the tutorial code is located, not the `AppComponent`.
 * Angular Material and Angular Flex-Layout are used for styling instead of the styles specified in the official tutorial.
-* Javascript calls to `alert()` are replaced with calls to Angular Material Snackbar with 2-second automatic close.
+* Javascript calls to `alert()` are replaced with calls to Angular Material Snackbar with 3-second automatic close.
