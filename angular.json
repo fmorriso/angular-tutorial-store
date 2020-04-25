@@ -22,7 +22,7 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -46,7 +46,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -55,17 +54,26 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
                 }
               ]
             },
             "development": {
+              "budgets": [
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ],
               "optimization": false,
               "outputHashing": "none",
               "sourceMap": true,
               "extractCss": true,
               "commonChunk": true,
               "namedChunks": true,
-              "aot": false,
               "extractLicenses": true,
               "vendorChunk": true,
               "buildOptimizer": false
@@ -138,5 +146,8 @@
       }
     }
   },
-  "defaultProject": "angular-tutorial-store"
+  "defaultProject": "angular-tutorial-store",
+  "cli": {
+    "analytics": "f4e4c56e-8791-4de6-a341-a2ab1ce13bec"
+  }
 }
