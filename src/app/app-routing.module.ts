@@ -11,15 +11,16 @@ const routes: Routes = [
   { path: 'products', component: ProductListComponent, data: { label: 'Products' } },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'about', component: AboutComponent, data: { label: 'About' } },
-  { path: '**', component: PageNotFoundComponent }
+  { path: '**', component: PageNotFoundComponent },
 ];
 
 const routeOptions: ExtraOptions = {
-  enableTracing: false
+  enableTracing: false,
+  relativeLinkResolution: 'legacy',
 };
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, routeOptions)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}
